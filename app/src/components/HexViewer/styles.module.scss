@@ -1,0 +1,55 @@
+.Wrapper {
+  width: 100%;
+  font-family: monospace;
+}
+
+.Content {
+  margin: auto;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  .Data,
+  .Hex,
+  .Text {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+
+    .ColumnTitle {
+      box-sizing: border-box;
+      width: calc(100% + 1px);
+      margin-left: -1px;
+      text-align: center;
+      border: 1px solid gray;
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+
+      > div {
+        height: 20px;
+      }
+    }
+
+    .ColumnValues {
+      display: grid;
+      grid-template-columns: repeat(1, 70px);
+    }
+
+    .TextTitle {
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.TextRow {
+  min-width: max-content;
+  width: 100px;
+  height: 20px;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  user-select: text;
+}

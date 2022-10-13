@@ -1,0 +1,27 @@
+.Row {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  font-weight: bold;
+  line-height: 1.6;
+  user-select: none;
+
+  &:last-child {
+    border-right: unset;
+  }
+
+  .Cell {
+    width: 70px;
+    text-align: center;
+    height: 20px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    user-select: none;
+
+    &:last-child {
+      border-right: unset;
+    }
+  }
+}

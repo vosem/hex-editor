@@ -1,6 +1,6 @@
 import React from 'react';
-import readFile from "./lib/readFile";
-import HexViewer from "./components/HexViewer";
+import readFile from './lib/readFile';
+import HexViewer from './components/HexViewer';
 
 function App() {
   const [file, setFile] = React.useState<null | string | Uint8Array>(null);
@@ -29,13 +29,13 @@ function App() {
           {' '}
           <button onClick={() => setFile(null)}>Reset</button>
         </div>
-        <HexViewer data={file} />
+        <HexViewer data={file} isBinary={isBinary} />
       </>
     )
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ userSelect: 'none' }}>
       {renderComponents()}
     </div>
   );
